@@ -1,0 +1,19 @@
+[size=6]7 Days to Die Mod - Quick Continue[/size]
+
+[url=https://www.nexusmods.com/7daystodie/mods/5631][img]https://img.shields.io/badge/Nexus%20Mod-Quick%20Continue%20-orange?style=flat-square&logo=spinrilla[/img][/url]
+[url=https://github.com/rdok/7daystodie_mod_quick_continue][img]https://img.shields.io/badge/GitHub-Repository-green?style=flat-square&logo=github[/img][/url]
+
+[quote]
+[b]Quick Continue:[/b] Automate continue game; useful for developers primarily.  
+[b]EAC Caveat:[/b] This mod uses custom code that is not compatible with Easy Anti-Cheat (EAC).
+[/quote]
+[url=https://www.nexusmods.com/7daystodie/mods/5631][img]https://github.com/rdok/7daystodie_mod_quick_continue/blob/main/documentation/showcase.gif?raw=true[/img][/url]
+
+[list]
+[*] 7daystodie Version: 1.0 (b333)
+[*] Install with [url=https://www.nexusmods.com/about/vortex/]Vortex[/url].
+[/list]
+[size=5]Features[/size]
+[list]
+[*] Automation: Automatically bypasses news notifications, clicks the 'Continue' button, then 'Start', and finally the 'Spawn' button.
+[/list]
