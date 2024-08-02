@@ -4,7 +4,7 @@
 [url=https://github.com/rdok/7daystodie_mod_quick_continue][img]https://img.shields.io/badge/GitHub-Repository-green?style=flat-square&logo=github[/img][/url]
 
 [quote]
-[b]Quick Continue:[/b] Automate continue game; useful for developers primarily.  
+[b]Quick Continue:[/b] Skip intros and jump straight into the game. Now with instructions to also skip the splash screen!  
 [b]EAC Caveat:[/b] This mod uses custom code that is not compatible with Easy Anti-Cheat (EAC).
 [/quote]
 [url=https://www.nexusmods.com/7daystodie/mods/5631][img]https://github.com/rdok/7daystodie_mod_quick_continue/blob/main/documentation/showcase.gif?raw=true[/img][/url]
@@ -16,4 +16,11 @@
 [size=5]Features[/size]
 [list]
 [*] Automation: Automatically bypasses news notifications, clicks the 'Continue' button, then 'Start', and finally the 'Spawn' button.
-[/list]
+[*] To skip the splash: Use [b]7dLauncher.exe[/b] to add the [b]-skipintro[/b] value into the [b]Additional Parameters[/b] field. Finally click on [b]Run & Save as default[/b] button.
+[*] Automation: Automatically skips news notifications, clicks 'Continue,' 'Start,' and 'Spawn' buttons for you.
+[*] Skip the Splash Screen:
+[list]
+[*] Open [b]7dLauncher.exe[/b].
+[*] Add [b]-skipintro[/b] to the Additional Parameters.
+[*] Click [b]Run & Save[/b] as default.
+[/list][/list]
