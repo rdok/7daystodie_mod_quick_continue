@@ -13,9 +13,6 @@
 
 ## Features
 
-- Automation: Automatically bypasses news notifications, clicks the 'Continue' button, then 'Start', and finally the 'Spawn' button.
-- To skip the splash: Use `7dLauncher.exe` to add the `-skipintro` value into the `Additional Parameters` field. Finally click on `Run & Save as default` button.
-
 - Automation: Automatically skips news notifications, clicks 'Continue,' 'Start,' and 'Spawn' buttons for you.
 - Skip the Splash Screen:
   - Open `7dLauncher.exe`.
