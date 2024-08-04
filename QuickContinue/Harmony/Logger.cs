@@ -9,7 +9,7 @@ namespace QuickContinue.Harmony
 #endif
         }
     }
-    
+
     public interface ILogger
     {
         void Info(string message);
