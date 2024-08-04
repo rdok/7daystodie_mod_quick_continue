@@ -50,7 +50,7 @@
         <Compile Include="Harmony\Logger.cs"/>
         <Compile Include="Harmony\QuickContinue.cs"/>
         <Compile Include="Harmony\SkipNews.cs"/>
-        <Compile Include="Harmony\Spawn.cs"/>
+        <Compile Include="Harmony\AutoSpawn.cs" />
         <Compile Include="Properties\AssemblyInfo.cs"/>
     </ItemGroup>
 

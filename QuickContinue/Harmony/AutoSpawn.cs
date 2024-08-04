@@ -3,8 +3,9 @@ using HarmonyLib;
 
 namespace QuickContinue.Harmony
 {
-    public class Span
+    public class AutoSpawn
     {
+#if AUTO_SPAWN
         private static readonly ILogger Logger = new Logger();
 
         [HarmonyPatch(typeof(XUiC_SpawnSelectionWindow))]
@@ -21,5 +22,6 @@ namespace QuickContinue.Harmony
                 __instance.SpawnButtonPressed(__instance.option1Method, __instance.option1Position);
             }
         }
+#endif
     }
 }
