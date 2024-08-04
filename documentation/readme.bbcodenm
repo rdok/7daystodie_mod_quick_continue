@@ -13,7 +13,12 @@
 [*] 7daystodie Version: 1.0 (b333)
 [*] Install with [url=https://www.nexusmods.com/about/vortex/]Vortex[/url].
 [/list]
-[size=5]Features[/size]
+[size=5]Changelog[/size]
+[size=3]Optional Mod: No Spawn - 1.0.0[/size]
+[list]
+[*] Initial release. Install either main or this, not both.
+[/list]
+[size=3]1.0.0 - 03 Aug 2024[/size]
 [list]
 [*] Automation: Automatically skips news notifications, clicks 'Continue,' 'Start,' and 'Spawn' buttons for you.
 [*] Skip the Splash Screen:
@@ -27,7 +32,7 @@
 These mods have been manually verified for compatibility, though my gameplay.
 [/quote]
 [list]
-[*] [url=https://www.nexusmods.com/7daystodie/mods/5640]Dot Crosshair[/url]
+[*] [url=https://www.nexusmods.com/7daystodie/mods/5631]Dot Crosshair[/url]
 [*] [url=https://www.nexusmods.com/7daystodie/mods/5601]Immersive Crosshair[/url]
 [*] [url=https://www.nexusmods.com/Core/Libs/Common/Widgets/DownloadPopUp?id=17443&nmm=1&game_id=1059]Danzo No Crosshair 1.2.1[/url]
 [*] [url=https://www.nexusmods.com/7daystodie/mods/5528]No Compass[/url]
