@@ -13,6 +13,10 @@
         <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
         <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+        <ModName>QuickContinue</ModName>
+        <ModVersion>1.0.0</ModVersion>
+        <ModDescription>Skip news, click on continue, then start, and finally spawn button.</ModDescription>
+        <ModId>5631</ModId>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
         <PlatformTarget>AnyCPU</PlatformTarget>
@@ -20,7 +24,7 @@
         <DebugType>full</DebugType>
         <Optimize>false</Optimize>
         <OutputPath>..\..\..\..\vortex_udf_7_days_to_die\Mods\QuickContinue</OutputPath>
-        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <DefineConstants>DEBUG;TRACE;AUTO_SPAWN</DefineConstants>
         <ErrorReport>prompt</ErrorReport>
         <WarningLevel>4</WarningLevel>
     </PropertyGroup>
@@ -29,13 +33,21 @@
         <DebugType>none</DebugType>
         <Optimize>true</Optimize>
         <OutputPath>bin\Release\</OutputPath>
-        <DefineConstants>TRACE</DefineConstants>
+        <DefineConstants>TRACE;AUTO_SPAWN</DefineConstants>
         <ErrorReport>prompt</ErrorReport>
         <WarningLevel>3</WarningLevel>
+        <AbsoluteOutputPath>$(MSBuildProjectDirectory)\$(OutputPath)</AbsoluteOutputPath>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'ReleaseNoAutoSpawn|AnyCPU' ">
+        <OutputPath>bin\ReleaseNoAutoSpawn\</OutputPath>
+        <ModName>QuickContinue_NoSpawn</ModName>
+        <ModVersion>1.0.0</ModVersion>
+        <ModDescription>Skip news, click on continue, then start, but not spawn button.</ModDescription>
+        <AbsoluteOutputPath>$(MSBuildProjectDirectory)\$(OutputPath)</AbsoluteOutputPath>
     </PropertyGroup>
     <ItemGroup>
         <Compile Include="Harmony\ContinueGame.cs"/>
-        <Compile Include="Harmony\Logger.cs" />
+        <Compile Include="Harmony\Logger.cs"/>
         <Compile Include="Harmony\QuickContinue.cs"/>
         <Compile Include="Harmony\SkipNews.cs"/>
         <Compile Include="Harmony\Spawn.cs"/>
@@ -69,10 +81,23 @@
 
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
 
-    <Target Name="AfterBuild" Condition=" '$(Configuration)' == 'Release' ">
-        <Exec Command="npm run build" WorkingDirectory="$(MSBuildProjectDirectory)\.."/>
+    <Target Name="AfterBuild" Condition=" '$(Configuration)' == 'Debug' OR '$(Configuration)' == 'Release' OR '$(Configuration)' == 'ReleaseNoAutoSpawn'">
+        <XmlPoke XmlInputPath="$(OutputPath)\ModInfo.xml" Query="/xml/Name/@value" Value="$(ModName)"/>
+        <XmlPoke XmlInputPath="$(OutputPath)\ModInfo.xml" Query="/xml/DisplayName/@value" Value="$(ModDescription)"/>
+        <XmlPoke XmlInputPath="$(OutputPath)\ModInfo.xml" Query="/xml/Author/@value" Value="Rizarttt"/>
+        <XmlPoke XmlInputPath="$(OutputPath)\ModInfo.xml" Query="/xml/Description/@value" Value="$(ModName)"/>
+        <XmlPoke XmlInputPath="$(OutputPath)\ModInfo.xml" Query="/xml/Version/@value" Value="$(ModVersion)"/>
+        <XmlPoke XmlInputPath="$(OutputPath)\ModInfo.xml" Query="/xml/Website/@value" Value="https://www.nexusmods.com/7daystodie/mods/5631"/>
+        
+        <Exec
+                Condition=" '$(Configuration)' != 'Debug' "
+                Command="npm run build --prefix -- $(AbsoluteOutputPath) $(ModName) $(ModVersion)"
+                WorkingDirectory="$(MSBuildProjectDirectory)\.." 
+        />
         <Exec Command="npm run generate_readme" WorkingDirectory="$(MSBuildProjectDirectory)\.."/>
+
     </Target>
+
     <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
          Other similar extension points exist, see Microsoft.Common.targets.
     <Target Name="BeforeBuild">

@@ -8,7 +8,7 @@
 
             public void InitMod(Mod modInstance)
             {
-                var type = GetType(); 
+                var type = GetType();
                 var id = type.ToString();
                 _logger.Info("Loading Patch: " + id);
                 var harmony = new HarmonyLib.Harmony(id);
