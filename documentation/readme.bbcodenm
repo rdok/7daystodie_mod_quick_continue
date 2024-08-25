@@ -4,14 +4,19 @@
 
 [quote]
 [b]Quick Continue:[/b] Skip intros and jump straight into the game. Now with instructions to also skip the splash screen!  
-[b]EAC Caveat:[/b] This mod uses custom code that is not compatible with Easy Anti-Cheat (EAC).
+[b]EAC:[/b] This mod uses custom code that is not compatible with Easy Anti-Cheat (EAC).
 [/quote]
 [url=https://www.nexusmods.com/7daystodie/mods/5631][img]https://github.com/rdok/7daystodie_mod_quick_continue/blob/main/documentation/showcase.gif?raw=true[/img][/url]
 
 [list]
-[*] 7daystodie Version: 1.0 (b333)
+[*] 7daystodie Version: 1.0
 [*] Install with [url=https://www.nexusmods.com/about/vortex/]Vortex[/url].
-[/list]
+[*] Skip the Splash Screen:
+[list]
+[*] Open [b]7dLauncher.exe[/b].
+[*] Add [b]-skipintro[/b] to the Additional Parameters.
+[*] Click [b]Run & Save[/b] as default.
+[/list][/list]
 [size=5]Changelog[/size]
 [size=3]1.0.0 No Spawn Optional Mod - 04 Aug 2024[/size]
 [list]
@@ -28,3 +33,11 @@
 [*] Add [b]-skipintro[/b] to the Additional Parameters.
 [*] Click [b]Run & Save[/b] as default.
 [/list][/list]
+[size=4]Notes[/size]
+[list]
+[*] [b]-quick-continue[/b] is another argument that can be used to quickly continue.
+[list]
+[*] However, I found it sometimes to not auto continue.
+[*] [url=https://discord.com/channels/243577046616375297/592825661211672576/1277159941270142976]Source[/url][/list]
+[*] The shortcut target with all the arguments I use:  [b]"C:\Steam\steamapps\common\7 Days To Die\7DaysToDie.exe" -UserDataFolder=C:\vortex_udf_7_days_to_die -skipintro -skipnewsscreen=true[/b]
+[/list]

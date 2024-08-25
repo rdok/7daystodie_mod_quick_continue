@@ -3,12 +3,16 @@
 [![nexus-mods-collection-immersive-hud](https://img.shields.io/badge/Nexus%20Mods%20Collection-Immersive%20HUD%20-orange?style=flat-square&logo=spinrilla)](https://next.nexusmods.com/7daystodie/collections/epfqzi)[![nexus-mods-page](https://img.shields.io/badge/Nexus%20Mod-Quick%20Continue%20-orange?style=flat-square&logo=spinrilla)](https://www.nexusmods.com/7daystodie/mods/5631)[![github-repository](https://img.shields.io/badge/GitHub-Repository-green?style=flat-square&logo=github)](https://github.com/rdok/7daystodie_mod_quick_continue)
 
 > **Quick Continue:** Skip intros and jump straight into the game. Now with instructions to also skip the splash screen!  
-> **EAC Caveat:** This mod uses custom code that is not compatible with Easy Anti-Cheat (EAC).
+> **EAC:** This mod uses custom code that is not compatible with Easy Anti-Cheat (EAC).
 
 [![Quick Continue Showcase](https://github.com/rdok/7daystodie_mod_quick_continue/blob/main/documentation/showcase.gif?raw=true)](https://www.nexusmods.com/7daystodie/mods/5631)
 
-- 7daystodie Version: 1.0 (b333)
+- 7daystodie Version: 1.0
 - Install with [Vortex](https://www.nexusmods.com/about/vortex/).
+- Skip the Splash Screen:
+  - Open `7dLauncher.exe`.
+  - Add `-skipintro` to the Additional Parameters.
+  - Click `Run & Save` as default.
 
 ## Changelog
 #### 1.0.0 No Spawn Optional Mod - 04 Aug 2024
@@ -22,3 +26,9 @@
   - Open `7dLauncher.exe`.
   - Add `-skipintro` to the Additional Parameters.
   - Click `Run & Save` as default.
+
+### Notes
+- `-quick-continue` is another argument that can be used to quickly continue.
+  - However, I found it sometimes to not auto continue.
+  - [Source](https://discord.com/channels/243577046616375297/592825661211672576/1277159941270142976)
+- The shortcut target with all the arguments I use:  `"C:\Steam\steamapps\common\7 Days To Die\7DaysToDie.exe" -UserDataFolder=C:\vortex_udf_7_days_to_die -skipintro -skipnewsscreen=true`
